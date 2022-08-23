@@ -10,17 +10,13 @@ int Prompt(string message)
     	return result;                          // Возвращает результат
 }
 
-int value = Prompt ("Введите число ");
-int a = value% 2; 
-if (a < 0 )  
-{
-	System.Console.WriteLine ($"Число {value} нечетное");
-}
-if (a > 0 )  
-{
-	System.Console.WriteLine ($"Число {value} нечетное");
-}
+int value = Prompt("Введите число ");
+int a = value % 2;
 if (a == 0)
-{ 
-	System.Console.WriteLine ($"Число {value} четное");
+{
+    System.Console.WriteLine($"Число {value} четное");
+}
+else
+{
+    System.Console.WriteLine($"Число {value} нечетное");
 }

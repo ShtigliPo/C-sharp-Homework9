@@ -14,24 +14,13 @@ int value1 = Prompt ("Введите первое число ");
 int value2 = Prompt ("Введите второе число ");
 int value3 = Prompt ("Введите третье число ");
 
-if (value1 > value2) {
-
-if (value1 > value3) 
+int max = value1;
+if (max < value2)
 {
-    System.Console.WriteLine ($"Число {value1} самое большое");
+    max = value2;
 }
-}
-if (value2 > value1) {
-   
-if (value2 > value3) 
+if (max < value3)
 {
-    System.Console.WriteLine ($"Число {value2} самое большое");
+    max = value3;
 }
-}
-if (value3 > value2) 
-{
-if (value3 > value1) 
-{
-    System.Console.WriteLine ($"Число {value3} самое большое");
-}
-}
+System.Console.WriteLine($"Число {max} самое большое");

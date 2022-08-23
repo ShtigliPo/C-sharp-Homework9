@@ -3,18 +3,25 @@
 
 int Prompt(string message)
 {
-    System.Console.Write(message);
-    string input = System.Console.ReadLine();
-    int result = int.Parse(input);
+    Console.Write(message);
+    string readValue = Console.ReadLine();
+    int result = int.Parse(readValue);
     return result;
 }
 
-int a;
-a = Prompt ("Введите число  ");
-int sum = 0;
-while (a > 0)
+int SumOfDigitsOfNumber(int number)
 {
-    sum = sum + a % 10;
-    a = a / 10;
+    int result = 0;
+    while (number > 0)
+    {
+        result += number % 10;
+        number = number / 10;
+    }
+    return result;
 }
-Console.WriteLine($"Сумма цифр в числе  : {sum}");
+int value = Prompt("Введите число  ");
+if (value >= 0)
+{
+    System.Console.WriteLine($"{value} -> {SumOfDigitsOfNumber(value)}");
+}
+else System.Console.WriteLine($"Некоректный ввод, введите положительное число");

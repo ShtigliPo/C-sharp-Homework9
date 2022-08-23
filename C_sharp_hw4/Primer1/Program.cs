@@ -1,25 +1,29 @@
 ﻿// Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
-// 3, 5 -> 243 (3⁵) 2, 4 -> 16
+// 3, 5 -> 243 (3⁵) 
+// 2, 4 -> 16
 
 int Prompt(string message)
 {
-    System.Console.Write(message);
-    string input = System.Console.ReadLine();
-    int result = int.Parse(input);
+    Console.Write(message);
+    string readValue = Console.ReadLine();
+    int result = int.Parse(readValue);
     return result;
 }
 
-int a;
-int n;
-a = Prompt("Введите первое число ");
-n = Prompt("Введите второе число ");
-int res = 1;
-for (int i = 1; i <= n; i++)
+int ExponentiationOfNumber(int value1, int value2)
 {
-    res = res * a;
+    int result = 1;
+    for (int i = 0; i < value2; i++)
+    {
+        result = result * value1;
+    }
+    return result;
 }
-Console.WriteLine($"{a} в степени {n} равно {res}");
-if (n < 0)
+
+int numberA = Prompt("Введите значение числа A  ");
+int numberB = Prompt("Введите значение числа B  ");
+if (numberB < 0)
 {
     System.Console.WriteLine("По условиям задачи, второе число должно быть натуральным");
 }
+else System.Console.WriteLine($"{numberA}, {numberB} -> {ExponentiationOfNumber(numberA, numberB)}");
