@@ -27,7 +27,7 @@ int Sum(int[] array)
     }
     return sum;
 }
-int[] array = inputarray(3);
+int[] array = inputarray(5);
 int sum = Sum(array);
 double avg = sum / ((double)array.Length);
 System.Console.WriteLine($"Сумма чисел равна {sum}, среднее арифметическое равно {avg}");
